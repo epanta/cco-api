@@ -1,20 +1,37 @@
 package br.com.sabesp.cco.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-
-import java.time.LocalDateTime;
+import lombok.NoArgsConstructor;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class NotificacaoDTO {
+
+    private Integer id;
 
     private String mensagem;
 
-    @JsonIgnore
-    private LocalDateTime dataHora;
+    private String dataHora;
 
     private String funcionalidade;
 
+    private String dataPlanilha;
+
+    private String municipio;
+
+    private String ultimoAjuste;
+
+    private String operadorResponsavel;
+
+    private Integer prazoAjuste;
+
+    private String motivo;
+
+    private String dataLiberacao;
+
+    private String dataFinal;
 }
