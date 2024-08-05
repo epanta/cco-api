@@ -1,6 +1,5 @@
 package br.com.sabesp.cco.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.validation.constraints.Email;
 import lombok.Builder;
 import lombok.Data;
@@ -13,22 +12,22 @@ public class UsuarioDTO {
 
     private String nome;
     private String matricula;
-    private String funcao;
+    private String login;
     private String unidade;
     private String perfil;
     private String telefone;
+    private String ramal;
+
     @Email
     private String email;
-    private String estado;
-    private String bairro;
-    private String cidade;
-    private String cep;
-    private String logradouro;
-    private String complemento;
-    @JsonIgnore
+    private MunicipioDTO municipio;
+    private String centroCusto;
+
     private LocalDateTime dtCriacao;
-    @JsonIgnore
+
     private LocalDateTime dtAtualizacao;
-    @JsonIgnore
+
     private boolean ativo;
+
+    private boolean novoAcesso;
 }

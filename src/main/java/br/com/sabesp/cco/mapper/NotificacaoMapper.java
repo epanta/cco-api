@@ -18,7 +18,7 @@ public interface NotificacaoMapper {
     DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 
-    PageDTO toDto(Page notificacao);
+    PageDTO toDto(Page<Notificacao> notificacao);
 
     @IterableMapping(elementTargetType = NotificacaoDTO.class)
     List<NotificacaoDTO> notificacoesToNotificacaoDtos(List<Notificacao> notificacao);

@@ -21,19 +21,18 @@ public class Usuario {
     @Id
     @GeneratedValue(generator = "USUARIO_SEQ", strategy = GenerationType.IDENTITY)
     @SequenceGenerator(name="USUARIO_SEQ", sequenceName = "USUARIO_SEQ", allocationSize=1)
-    @Column(name = "ID_USUSARIO")
     private Long id;
 
-    @Column(name = "NOME_USUARIO")
+    @Column(name = "nome")
     private String nome;
 
-    @Column(name = "MATRICULA_USUARIO")
+    @Column(name = "matricula")
     private String matricula;
 
-    @Column(name = "FUNCAO_USUARIO")
-    private String funcao;
+    @Column(name = "LOGIN")
+    private String login;
 
-    @Column(name = "UNI_USUARIO")
+    @Column(name = "unidade")
     private String unidade;
 
     @Column(name = "PERFIL_USUARIO")
@@ -47,7 +46,7 @@ public class Usuario {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "ID_ENDERECO_USUARIO")
-    private Endereco endereco;
+    private Municipio municipio;
 
     @Column(name = "DT_CRIACAO")
     private Date dtCriacao;
@@ -57,9 +56,9 @@ public class Usuario {
 
     @Column(name = "ATIVO")
     @Convert(converter = NumericBooleanConverter.class)
-    private boolean ativo;
+    private Boolean ativo;
 
     @Column(name = "NOVO_ACESSO")
     @Convert(converter = NumericBooleanConverter.class)
-    private boolean novoAcesso;
+    private Boolean novoAcesso;
 }

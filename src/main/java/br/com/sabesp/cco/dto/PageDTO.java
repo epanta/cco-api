@@ -9,8 +9,8 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class PageDTO {
-    private List<NotificacaoDTO> content;
+public class PageDTO<T> {
+    private List<?> content;
     private int pageNumber;
     private int pageSize;
     private long totalElements;

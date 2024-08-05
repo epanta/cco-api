@@ -9,9 +9,18 @@ import org.apache.commons.lang3.StringUtils;
 public enum PerfilEnum {
 
     ADMIN("Administrador"),
-    REPRESENTANTE("Representante"),
-    Consulta("Consulta");
-
+    COO("COO"),
+    Centro("Centro"),
+    Correcao("Correção"),
+    ETA3("ETA 3"),
+    ETA3_ADMIN("ETA 3 ADMIN"),
+    GLOBAL("Global"),
+    MASPP_GRAFICOS("MappsGraficos"),
+    MASPP_LIMITES("MappsLimites"),
+    NORTE("Norte"),
+    PITOMETRIA("Pitometria"),
+    SABOO("Saboo"),
+    SUL("Sul");
     private final String descricao;
 
     public static PerfilEnum from(String perfil){
